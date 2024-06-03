@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use('/auth', authRoutes);
 app.use('/files', fileRoutes);
 
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect('mongodb+srv://node-auth:node@cluster0.mn7emsg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
